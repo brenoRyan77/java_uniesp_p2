@@ -25,5 +25,5 @@ complementares da cadeira Línguagem de Programação - P2
 
 - [Breno Ryan de Oliveira Lima](https://github.com/brenoRyan77)
 - [Luan Lucas Barbosa de Oliveira](https://github.com/LuanBarb0sa)
-- [Igor Galdino Beltrão do Nascimento]()
-- [Gustavo Antônio Lopes Nóbrega]()
+- [Igor Galdino Beltrão do Nascimento](https://github.com/igorbeltrao1)
+- [Gustavo Antônio Lopes Nóbrega](https://github.com/gustavolopesnobrega)
