@@ -21,3 +21,9 @@ complementares da cadeira Línguagem de Programação - P2
 
 **Back-end:** JAVA
 
+## Colaboradores
+
+- [Breno Ryan de Oliveira Lima](https://github.com/brenoRyan77)
+- [Luan Lucas Barbosa de Oliveira](https://github.com/LuanBarb0sa)
+- [Igor Galdino Beltrão do Nascimento]()
+- [Gustavo Antônio Lopes Nóbrega]()
