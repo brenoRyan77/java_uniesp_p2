@@ -1,5 +1,6 @@
 package com.br.vendas;
 
+
 public class Vendedor {
 
     private String nome;

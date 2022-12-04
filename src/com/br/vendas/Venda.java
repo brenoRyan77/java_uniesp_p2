@@ -54,7 +54,7 @@ public class Venda {
         double valorDesconto = this.produto.getValorVenda() - descontoValor;
 
         if(valorDesconto < this.produto.getValorCusto()){
-            System.out.println("Valor final do produto não pode" +
+            System.out.println("Valor final do produto nÃ£o pode" +
                     " ser menor do que o valor de custo.");
         }
 
@@ -83,16 +83,16 @@ public class Venda {
     public void imprimir(){
 
         System.out.println("==Vendedor==");
-        System.out.println("Código: " + this.vendedor.getCodigo());
         System.out.println("Nome: " + this.vendedor.getNome());
-        System.out.println("Comissão: " + this.vendedor.getComissao());
+        System.out.println("CÃ³igo: " + this.vendedor.getCodigo());
+        System.out.println("ComissÃ£o: " + this.vendedor.getComissao());
 
         System.out.println();
         System.out.println("==Produto==");
-        System.out.println("Código: " + this.produto.getCodigo());
-        System.out.println("Descrição: " + this.produto.getDescricao());
+        System.out.println("CÃ³digo: " + this.produto.getCodigo());
+        System.out.println("DescriÃ§Ã£o: " + this.produto.getDescricao());
         System.out.println("Valor da Venda: " + this.produto.getValorVenda());
-        System.out.println("Promoção: " + (this.produto.getPromocao() ? "SIM" : "NÃO"));
+        System.out.println("PromoÃ§Ã£o: " + (this.produto.getPromocao() ? "SIM" : "NÃƒO"));
         System.out.println("Valor de desconto: " + this.desconto);
 
         System.out.println();
