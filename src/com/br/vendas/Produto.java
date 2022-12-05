@@ -1,8 +1,12 @@
 package com.br.vendas;
 
+import java.util.Scanner;
+
 public class Produto {
 
-    private Integer codigo;
+    Scanner sc = new Scanner(System.in);
+
+    private String codigo;
     private String descricao;
     private Double valorVenda;
     private Double valorCusto;
@@ -12,7 +16,7 @@ public class Produto {
 
     }
 
-    public Produto(Integer codigo, String descricao,
+    public Produto(String codigo, String descricao,
                    Double valorVenda, Double valorCusto,
                    Boolean promocao) {
         this.codigo = codigo;
@@ -22,11 +26,11 @@ public class Produto {
         this.promocao = promocao;
     }
 
-    public Integer getCodigo() {
+    public String getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(Integer codigo) {
+    public void setCodigo(String codigo) {
         this.codigo = codigo;
     }
 
@@ -61,4 +65,24 @@ public class Produto {
     public void setPromocao(Boolean promocao) {
         this.promocao = promocao;
     }
+    
+    public void cadastrarProduto() {
+    	
+    	System.out.println("Código: ");
+    	setCodigo(sc.nextLine());
+    	
+    	System.out.println();
+    	System.out.println("Descrição");
+    	setDescricao(sc.nextLine());
+
+    }
+    
+    
+    public void status() {
+    	System.out.println();
+		System.out.println("####DADOS PRODUTO####");
+		System.out.println("Código do produto: " + this.codigo);
+		System.out.println("Descrição: " + this.descricao);
+    }
+
 }
