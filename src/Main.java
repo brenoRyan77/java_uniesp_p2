@@ -7,14 +7,14 @@ import com.br.vendas.Vendedor;
 public class Main {
 
 	public static void main(String[] args) {
+		
 		Scanner sc = new Scanner(System.in);
 
-		// Inicializando objetos
 		Venda venda = new Venda();
 		Vendedor vendedor = new Vendedor();
 		Produto prod = new Produto();
 
-		Integer result;
+		String result;
 
 		Boolean menu = true;
 
@@ -25,32 +25,36 @@ public class Main {
 			System.out.println("Digite 3 para cadastrar um produto.");
 			System.out.println("Digite 4 para exibir o status da venda.");
 			System.out.println("Digite 100 para encerrar o programa.");
-			result = sc.nextInt();
+			result = sc.nextLine();
 
-			if (result.equals(100)) {
-				System.out.println("Programa encerrado!");
+			if (result.equals("100")) {
+				System.out.println("Finalizando...");
 				menu = false;
-			} else if (result != 1 && result != 2 && result != 3) {
+			} else if (!result.equals("1") && !result.equals("2") && !result.equals("3") && !result.equals("4")) {
 				System.out.println("Digite uma opção válida!");
 				menu = true;
 			}
 
-			if (result == 1) {
+			if (result.equals("1")) {
 				vendedor.cadastrar();
+				System.out.println();
 			}
 
-			if (result == 2) {
+			if (result.equals("2")) {
 				venda.cadastrarVenda();
+				System.out.println();
 			}
 
-			if (result == 3) {
+			if (result.equals("3")) {
 				prod.cadastrarProduto();
+				System.out.println();
 			}
 
-			if (result == 4) {
+			if (result.equals("4")) {
 				vendedor.status();
 				venda.imprimir();
 				prod.status();
+				System.out.println();
 			}
 
 		}
