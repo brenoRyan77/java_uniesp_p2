@@ -7,7 +7,7 @@ public class Vendedor {
 	Scanner sc = new Scanner(System.in);
 
     private String nome;
-    private String codigo;
+    private Integer codigo;
     private Double comissao;
     private String endereco;
 
@@ -15,7 +15,7 @@ public class Vendedor {
 
     }
 
-    public Vendedor(String nome, String codigo, String endereco, Double comissao) {
+    public Vendedor(String nome, Integer codigo, String endereco, Double comissao) {
         this.nome = nome;
         this.codigo = codigo;
         this.endereco = endereco;
@@ -30,11 +30,11 @@ public class Vendedor {
         this.nome = nome;
     }
 
-    public String getCodigo() {
+    public Integer getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(String codigo) {
+    public void setCodigo(Integer codigo) {
         this.codigo = codigo;
     }
 
@@ -55,14 +55,9 @@ public class Vendedor {
     }
     
     public void cadastrar() {
-    	
-    	
-    	
+ 
     	try {
     		
-			System.out.print("Código do vendedor: ");
-			setCodigo(sc.nextLine());
-			
 			System.out.print("Digite o nome do vendedor: ");
 			setNome(sc.nextLine());
 			
@@ -72,6 +67,8 @@ public class Vendedor {
 			System.out.print("Digite a comissão: ");
 			setComissao(sc.nextDouble());
 			
+			System.out.print("Código do vendedor: ");
+			setCodigo(sc.nextInt());
 			
 		} catch (Exception e) {
 			System.out.println("Algo de errado! Revise seus dados e reinicie a aplicação.");

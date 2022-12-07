@@ -6,7 +6,7 @@ public class Produto {
 
     Scanner sc = new Scanner(System.in);
 
-    private String codigo;
+    private Integer codigo;
     private String descricao;
     private Double valorVenda;
     private Double valorCusto;
@@ -16,7 +16,7 @@ public class Produto {
 
     }
 
-    public Produto(String codigo, String descricao,
+    public Produto(Integer codigo, String descricao,
                    Double valorVenda, Double valorCusto,
                    Boolean promocao) {
         this.codigo = codigo;
@@ -26,11 +26,11 @@ public class Produto {
         this.promocao = promocao;
     }
 
-    public String getCodigo() {
+    public Integer getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(String codigo) {
+    public void setCodigo(Integer codigo) {
         this.codigo = codigo;
     }
 
@@ -68,13 +68,14 @@ public class Produto {
     
     public void cadastrarProduto() {
     	
-    	System.out.println("Código: ");
-    	setCodigo(sc.nextLine());
-    	
-    	System.out.println();
-    	System.out.println("Descrição");
-    	setDescricao(sc.nextLine());
-
+    	try {
+			System.out.print("Descrição");
+			setDescricao(sc.nextLine());
+			System.out.print("Código: ");
+			setCodigo(sc.nextInt());
+		} catch (Exception e) {
+			System.out.println("Revise seus dados e reinicie a aplicação");
+		}
     }
     
     
