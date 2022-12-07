@@ -95,10 +95,15 @@ public class Venda{
     
     public void cadastrarVenda() {
     	
-    	System.out.println("Quantidade de itens: ");
-    	setQuantidadeItens(sc.nextInt());
-    	
-    	System.out.println("Valor da venda: ");
-    	setValor(sc.nextDouble());
+    	try {
+			System.out.println("Quantidade de itens: ");
+			setQuantidadeItens(sc.nextInt());
+			System.out.println("Valor da venda: ");
+			setValor(sc.nextDouble());
+			
+		} catch (Exception e) {
+			
+			System.out.println("Algo de errado! Revise seus dados e reinicie a aplicação.");
+		}
     }
 }

@@ -56,17 +56,26 @@ public class Vendedor {
     
     public void cadastrar() {
     	
-    	System.out.println("Código do vendedor: ");
-    	setCodigo(sc.nextLine());
     	
-		System.out.println("Digite o nome do vendedor: ");
-		setNome(sc.nextLine());
-		
-		System.out.println("Digite o Endereço: ");
-		setEndereco(sc.nextLine());
-		
-		System.out.println("Digite a comissão: ");
-		setComissao(sc.nextDouble());
+    	
+    	try {
+    		
+			System.out.print("Código do vendedor: ");
+			setCodigo(sc.nextLine());
+			
+			System.out.print("Digite o nome do vendedor: ");
+			setNome(sc.nextLine());
+			
+			System.out.print("Digite o Endereço: ");
+			setEndereco(sc.nextLine());
+			
+			System.out.print("Digite a comissão: ");
+			setComissao(sc.nextDouble());
+			
+			
+		} catch (Exception e) {
+			System.out.println("Algo de errado! Revise seus dados e reinicie a aplicação.");
+		}
 		
 	}
     
